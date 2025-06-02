@@ -36,7 +36,7 @@ jobs:
       # Build sample Python project
       - name: "Build Python Project"
         # yamllint disable-line rule:line-length
-        uses: lfreleng-actions/python-build-action@759476bd3c476c1d16aae50ebddce1512ec290af # v0.1.1
+        uses: lfreleng-actions/python-build-action@a9d0ef8a2324ac76e798ad6dc306f08b83b5b213 # v0.1.11
         with:
           path_prefix: "test-python-project/"
           tox_build: false
