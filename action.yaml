@@ -47,7 +47,7 @@ runs:
       # yamllint disable-line rule:line-length
       uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
       with:
-        name: ${{ env.python_project_name }}
+        name: ${{ steps.naming.outputs.PYTHON_PROJECT_NAME }}
         path: ${{ inputs.ARTEFACT_PATH }}
 
     - name: "Setup Python ${{ inputs.python_version }}"
