@@ -35,6 +35,7 @@ jobs:
 
       # Build sample Python project
       - name: "Build Python Project"
+        id: build
         # yamllint disable-line rule:line-length
         uses: lfreleng-actions/python-build-action@759476bd3c476c1d16aae50ebddce1512ec290af # v0.1.1
         with:
@@ -45,5 +46,6 @@ jobs:
       - name: "Run action: ${{ github.repository }}"
         uses: ./
         with:
-          python_version: "${{ env.build_python }}"
+          # yamllint disable-line rule:line-length
+          python_version: "${{ steps.build.outputs.BUILD_PYTHON_VERSION }}"
           path_prefix: "test-python-project/"
