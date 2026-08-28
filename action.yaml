@@ -19,17 +19,17 @@ inputs:
     default: false
   ARTEFACT_PATH:
     description: "Path/location to build artefacts"
-    type: string
+    # type: string
     required: false
     default: "dist"
   SUMMARY:
     description: "Whether to generate summary output"
-    type: boolean
+    # type: boolean
     required: false
     default: true
   PATH_PREFIX:
     description: "Directory location containing project code"
-    type: string
+    # type: string
     required: false
     default: ""
 
